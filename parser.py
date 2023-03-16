@@ -28,18 +28,18 @@ def make_table(connection):
            pk text NOT NULL UNIQUE,
            normtitle text NOT NULL,
            title text NOT NULL,
-           title_alt text,
-           header text,
+           title_alt text COLLATE NOCASE,
+           header text COLLATE NOCASE,
            description text,
            year integer NOT NULL,
            month integer NOT NULL,
            ordinal integer,
            page integer,
-           plainning_area text,
-           project_planner text,
-           applicant text,
-           status text,
-           geoaddr text)
+           plainning_area text COLLATE NOCASE,
+           project_planner text COLLATE NOCASE,
+           applicant text COLLATE NOCASE,
+           status text COLLATE NOCASE,
+           geoaddr text COLLATE NOCASE)
     ''')
 
 
